@@ -1,0 +1,9 @@
+framework:
+    messenger:
+        transports:
+            async:
+                dsn: 'in-memory://?serialize=1'
+                serializer: 'messenger.transport.symfony_serializer'
+        routing:
+            # Route your messages to the transports
+             'App\Message\MessageExample': async
